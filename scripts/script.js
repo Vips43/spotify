@@ -6,5 +6,6 @@ let childContainer = document.querySelector('.child-container')
 menuBtn.addEventListener('click', ()=>{
     childs.forEach((e)=>{
         e.classList.toggle('display')
+        childContainer.classList.toggle('display')
     })
 })
