@@ -4,7 +4,7 @@
   box-sizing: border-box;
   transition: all 0.5s;
 }
-html {
+html{
   width: 100%;
 }
 body {
@@ -95,7 +95,6 @@ body {
   }
 }
 .nav-downloads .child-container .nav-downloads-child {
-  padding: 15px 10px;
   color: #ffffff;
 }
 .nav-downloads .child-container .nav-downloads-child:hover {
@@ -142,6 +141,7 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 2rem;
   padding: 1rem;
@@ -184,6 +184,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  cursor: pointer;
   transition: opacity .2s ease-in, bottom .2s ease-in;
   opacity: 0;
 }
@@ -192,58 +193,69 @@ body {
   bottom: 15px;
 }
 
-
-
-
-
-
-
-@media (max-width: 700px) {
-
-  .nav-downloads {
-    background-color: black;
-  }
-
-  .nav-downloads > .child-container {
-    position: absolute;
-    top: 34px;
-    right: -90px;
-    color: white;
-    background-color: black;
-  }
-
-  .nav-downloads .mob-menu {
-    display: block;
-    position: absolute;
-    rotate: -90deg;
-    top: -20px;
-    right: 1px;
-    padding: 10px;
-    opacity: 1;
-
-    span {
-      font-weight: bolder;
-      font-size: 1.5rem;
-      color: #ffffff;
-    }
-  }
-
-  .child-container,
-  .nav-downloads-child {
-    opacity: 0;
-  }
-
-  .display {
-    opacity: 1;
-  }
-  .log-in .log-in-child {
-    display: none;
-  }
-  .body .title {
-    color: grey;
-    font-size: 1rem;
-  }
-  .body .song-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.music-container{
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid white;
+  background-color:black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: all .3s ease-in-out;
+}
+.music-container > i{
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+  transform: translate(2px, -10px) rotate(0);
+  color: grey;
+  transition: all .5s ease-in-out;
+}
+.music-container.full{
+  height: 400px;
+}
+.music-container.full > i{
+  top: 0;
+  transform: translateY(10px) rotate(180deg);
+}
+  .hide {
+  display: none; /* will be used to show song info */
+}
+.music-container.full .hide {
+  display: block;
+  color: white;
+  text-align: center;
+}
+.music-container .icon-container{
+  padding: .3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.music-container .icon-container > i{
+  border-radius: 50%;
+  font-size: .7rem;
+  background-color: #363636;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.music-container .icon-container > i:nth-child(2){
+  font-size: .9rem;
+  width: 30px;
+  height: 30px;
+  background-color: #1ed760;
+}
+.music-container .icon-container > i:hover{
+  background-color: transparent;
+  color: #1ed760;
 }
