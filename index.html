@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
     <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="styles/mobile.css" type="text/css" media="all" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/mobile.css" type="text/css" media="all" />
 </head>
 
 <body>
@@ -32,23 +32,24 @@
             </div>
         </section>
         <section class="log-in">
-            <span class="log-in-child"><i class="fa-solid fa-circle-arrow-down" style="color: #ffffff;"></i> Install App</span>
+            <span class="log-in-child"><i class="fa-solid fa-circle-arrow-down" style="color: #ffffff;"></i> Install
+                App</span>
             <span class="log-in-child">Sign Up</span>
             <span class="log-in-child">Log in</span>
         </section>
     </nav>
-    
-    
+
+
     <div class="body">
-        
+
         <div class="title">
             <h1>Trending songs</h1>
         </div>
-        
-        
+
+
         <div class="song-list">
-            
-            
+
+
             <!-- <div class="song-container">
                 <div class="song-img">
                     <img id="img" src="../images/pehla-tu-duja-tu-son-of-sardaar-2-500-500.jpg" alt="">
@@ -62,16 +63,29 @@
                     <p>Pehla Tu Duja Tu - Son Of Sardaar</p>
                 </div>
             </div> -->
-            
-            
-            
-            
-        </div>
-        
-    </div>
-    
 
-    
+
+
+
+        </div>
+        <div class="music-container">
+            <i class="fa-solid fa-angles-up"></i>
+            <div class="hide">
+                <h3 id="currentSongName">No song playing</h3>
+                <p id="currentSongArtist"></p>
+            </div>
+            <div class="icon-container">
+                <i class="fa-solid fa-chevron-left"></i>
+                <i id="playSong" class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
     <script src="scripts/data.js" type="text/javascript" charset="utf-8"></script>
     <script src="scripts/script.js"></script>
 </body>
